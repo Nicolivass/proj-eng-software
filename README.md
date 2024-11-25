@@ -1,8 +1,13 @@
 # Sistema de Divulgação e Avaliação de Restaurantes
 
-## Descrição do Trabalho
-
-Este projeto consiste na construção de artefatos utilizando um processo de desenvolvimento iterativo e incremental. Para auxiliar a elaboração dos artefatos, sistemas de software existentes disponíveis na Internet podem ser consultados. O sistema a ser desenvolvido é focado em possibilitar a divulgação e avaliação de restaurantes, implementando as operações básicas conhecidas como CRUD (Create, Read, Update, Delete).
+Projeto da disciplina Engenharia de Software da Universidade de Brasília. 
+Integrantes: 
+- 190114860
+- -
+- -
+- -
+- -
+- -
 
 ### Objetivo do Sistema
 
@@ -47,10 +52,10 @@ O sistema permite:
 
 ## Tecnologias e Ferramentas
 
-- **Backend**: (Adicionar tecnologia)
-- **Frontend**: (Adicionar tecnologia)
-- **Banco de Dados**: (Adicionar tecnologia)
-- **Ferramentas de Gerenciamento**: (Adicionar tecnologia)
+- **Backend**: 
+- **Frontend**: 
+- **Banco de Dados**:
+- **Ferramentas de Gerenciamento**: GiitHub, Kanban
 
 ---
 
@@ -58,4 +63,4 @@ O sistema permite:
 
 1. Clone o repositório:
    ```bash
-   git clone <url-do-repositorio>
+   git clone <https://github.com/Nicolivass/proj-eng-software>
