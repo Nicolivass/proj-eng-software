@@ -1,0 +1,34 @@
+<!-- Cadastro de Restaurante -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Restaurante</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastrar Restaurante</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="restaurantes.html">Lista de Restaurantes</a>
+    </nav>
+  </header>
+  <main>
+    <form id="form-restaurante" class="form-cadastro">
+      <label for="nome">Nome do Restaurante:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="local">Localização:</label>
+      <input type="text" id="local" name="local" required>
+
+      <label for="avaliacao">Avaliação (1 a 5):</label>
+      <input type="number" id="avaliacao" name="avaliacao" min="1" max="5" step="0.1" required>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+  </main>
+  <script src="novo-restaurante.js"></script>
+</body>
+</html>
