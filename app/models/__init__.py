@@ -1,0 +1,1 @@
+from models.tipo_usuario import TipoUsuario
