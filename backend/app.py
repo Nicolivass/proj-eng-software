@@ -52,20 +52,20 @@ def add_restaurante():
 # Rota para atualizar restaurante
 @app.route('/restaurantes/<int:id>', methods=['PUT'])
 def update_restaurante(id):
-    if not request.is_json:
-        return jsonify({"erro": "O conteúdo deve ser JSON"}), 400
-
     data = request.get_json()
-    restaurante = next((r for r in restaurantes if r["id"] == id), None)
+    if not all(key in data for key in ("nome", "local", "avaliacao")):
+        return jsonify({"erro": "Dados inválidos"}), 400
+
+    restaurante = next((r for r in restaurantes if r['id'] == id), None)
     if not restaurante:
         return jsonify({"erro": "Restaurante não encontrado"}), 404
 
     restaurante.update({
-        "nome": data.get("nome", restaurante["nome"]),
-        "local": data.get("local", restaurante["local"]),
-        "avaliacao": float(data.get("avaliacao", restaurante["avaliacao"])),
+        "nome": data["nome"],
+        "local": data["local"],
+        "avaliacao": data["avaliacao"]
     })
-    return jsonify(restaurante)
+    return jsonify(restaurante), 200
 
 # Rota para excluir restaurante
 @app.route('/restaurantes/<int:id>', methods=['DELETE'])
