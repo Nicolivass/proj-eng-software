@@ -59,24 +59,24 @@ main {
 
 .restaurante-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    width: 100%;
-    margin-top: 20px;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Itens de tamanho mínimo de 300px */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px;
 }
 
+/* Estilo para cada card de restaurante */
 .restaurante-card {
-    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    padding: 15px;
     text-align: center;
     transition: transform 0.2s ease-in-out;
 }
 
 .restaurante-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Animação ao passar o mouse */
 }
 
 .restaurante-card h3 {
@@ -89,9 +89,35 @@ main {
     color: #555;
 }
 
+.restaurante-card button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-editar {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: #0056b3;
+}
+
+.btn-excluir {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.btn-excluir:hover {
+    background-color: #e60000;
+}
+
 /* Cadastro de Restaurante */
 .form-cadastro input {
-    width: 100%;
+    width: calc(100% - 20px); /* Ajusta o tamanho para evitar corte */
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -99,19 +125,10 @@ main {
     box-sizing: border-box;
 }
 
-
 .form-cadastro label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-}
-
-.form-cadastro input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
 .form-cadastro button {
@@ -126,5 +143,49 @@ main {
 }
 
 .form-cadastro button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para o formulário de cadastro */
+#form-restaurante {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 30px auto; /* Centraliza o formulário */
+}
+
+#form-restaurante label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+#form-restaurante input {
+    width: calc(100% - 20px); /* Ajusta o tamanho para evitar corte */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#form-restaurante button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-restaurante button:hover {
     background-color: #0056b3;
 }

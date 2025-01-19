@@ -1,17 +1,25 @@
-const API_URL = "http://127.0.0.1:5000/restaurantes";
 const form = document.getElementById('form-restaurante');
 
-// Função para enviar dados do formulário
+// Submeter formulário para criar ou editar
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const nome = document.getElementById('nome').value;
-    const local = document.getElementById('local').value;
-    const avaliacao = document.getElementById('avaliacao').value;
+    const id = form.dataset.id;
+    const nome = document.getElementById('nome').value.trim();
+    const local = document.getElementById('local').value.trim();
+    const avaliacao = parseFloat(document.getElementById('avaliacao').value);
+
+    if (!nome || !local || isNaN(avaliacao)) {
+        alert("Por favor, preencha todos os campos corretamente.");
+        return;
+    }
+
+    const url = id ? `http://127.0.0.1:5000/restaurantes/${id}` : "http://127.0.0.1:5000/restaurantes";
+    const method = id ? 'PUT' : 'POST';
 
     try {
-        const response = await fetch(API_URL, {
-            method: 'POST',
+        const response = await fetch(url, {
+            method,
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -19,13 +27,40 @@ form.addEventListener('submit', async (event) => {
         });
 
         if (response.ok) {
-            alert("Restaurante cadastrado com sucesso!");
-            form.reset();
+            alert(id ? "Restaurante atualizado com sucesso!" : "Restaurante cadastrado com sucesso!");
+            form.reset(); 
+            delete form.dataset.id; 
+            window.location.href = 'restaurantes.html'; 
         } else {
-            alert("Erro ao cadastrar restaurante.");
+            const error = await response.json();
+            alert(error.erro || "Erro ao salvar restaurante.");
         }
     } catch (error) {
-        console.error("Erro ao enviar restaurante:", error);
+        console.error("Erro ao conectar ao servidor:", error);
         alert("Erro ao conectar ao servidor.");
+    }
+});
+
+// Carregar os dados do restaurante
+window.addEventListener('DOMContentLoaded', async () => {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    if (id) {
+        try {
+            const response = await fetch(`http://127.0.0.1:5000/restaurantes/${id}`);
+            if (response.ok) {
+                const restaurante = await response.json();
+
+                document.getElementById('nome').value = restaurante.nome;
+                document.getElementById('local').value = restaurante.local;
+                document.getElementById('avaliacao').value = restaurante.avaliacao;
+                document.getElementById('form-restaurante').dataset.id = id;
+            } else {
+                alert("Erro ao carregar os dados do restaurante.");
+            }
+        } catch (error) {
+            console.error("Erro ao conectar ao servidor:", error);
+        }
     }
 });
