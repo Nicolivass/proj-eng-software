@@ -1,4 +1,3 @@
-<!-- Listagem de Restaurantes -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
     <h1>Lista de Restaurantes</h1>
     <nav>
@@ -15,14 +15,21 @@
       <a href="novo-restaurante.html">Adicionar Restaurante</a>
     </nav>
   </header>
+
   <main>
     <section id="restaurantes-lista">
       <h2>Restaurantes Cadastrados</h2>
       <div id="restaurantes" class="restaurante-container">
-        <!-- Adição dinâmica de itens -->
       </div>
     </section>
+    <div id="menu-modal">
+      <span id="menu-modal-close">✖</span>
+      <h3>Menus</h3>
+      <div id="menu-content"></div>
+    </div>
   </main>
+
   <script src="restaurantes.js"></script>
+
 </body>
 </html>

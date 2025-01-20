@@ -1,4 +1,3 @@
-<!-- Cadastro de Restaurante -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro de Restaurante</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    #menus button {
+      margin-top: 15px;
+    }
+
+    #form-restaurante button {
+      margin-top: 20px;
+    }
+
+    #menu-container .menu-item {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -17,16 +29,22 @@
   </header>
   <main>
     <form id="form-restaurante">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite o nome do restaurante" required>
-
-        <label for="local">Local:</label>
-        <input type="text" id="local" name="local" placeholder="Digite o local" required>
-
-        <label for="avaliacao">Avaliação:</label>
-        <input type="number" id="avaliacao" name="avaliacao" placeholder="Digite a avaliação" step="0.1" required>
-
-        <button type="submit">Salvar</button>
+      <label for="nome">Nome do Restaurante:</label>
+      <input type="text" id="nome" name="nome" required>
+    
+      <label for="local">Local:</label>
+      <input type="text" id="local" name="local" required>
+    
+      <label for="avaliacao">Avaliação:</label>
+      <input type="number" id="avaliacao" name="avaliacao" step="0.1" required>
+    
+      <section id="menus">
+        <h3>Menus</h3>
+        <div id="menu-container"></div>
+        <button type="button" id="adicionar-menu">Adicionar Menu</button>
+      </section>
+    
+      <button type="submit">Salvar</button>
     </form>
   </main>
 
