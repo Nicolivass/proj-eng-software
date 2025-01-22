@@ -54,7 +54,7 @@ O sistema permite:
 
 - **Backend**: Flask, Python.
 - **Frontend**: HTML, CSS, JavaScript.
-- **Banco de Dados**: ORM (ainda vou especificar o framework)
+- **Banco de Dados**: ORM, MySQL.
 - **Ferramentas de Gerenciamento**: GitHub, Kanban.
 
 ---
