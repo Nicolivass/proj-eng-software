@@ -1,0 +1,43 @@
+/* Figma Styles of your File */
+:root {
+  /* Colors */
+  --laranja-escuro: #ff9f1c;
+  --laranja-claro: #ffbf69;
+  --branco: #ffffff;
+  --azul-claro: #cbf3f0;
+  --azul: #2ec4b6;
+
+  /* Fonts */
+  --fonte-pequena-font-family: Inter-Regular, sans-serif;
+  --fonte-pequena-font-size: 22px;
+  --fonte-pequena-line-height: normal;
+  --fonte-pequena-font-weight: 400;
+  --fonte-pequena-font-style: normal;
+  --fonte-media-font-family: Inter-Regular, sans-serif;
+  --fonte-media-font-size: 30px;
+  --fonte-media-line-height: normal;
+  --fonte-media-font-weight: 400;
+  --fonte-media-font-style: normal;
+  --fonte-grande-font-family: Inter-Regular, sans-serif;
+  --fonte-grande-font-size: 50px;
+  --fonte-grande-line-height: normal;
+  --fonte-grande-font-weight: 400;
+  --fonte-grande-font-style: normal;
+  --titulo-1-font-family: Inter-Regular, sans-serif;
+  --titulo-1-font-size: 50px;
+  --titulo-1-line-height: normal;
+  --titulo-1-font-weight: 400;
+  --titulo-1-font-style: normal;
+  --titulo-2-font-family: Inter-Regular, sans-serif;
+  --titulo-2-font-size: 35px;
+  --titulo-2-line-height: normal;
+  --titulo-2-font-weight: 400;
+  --titulo-2-font-style: normal;
+  --titulo-pequeno-font-family: Inter-Regular, sans-serif;
+  --titulo-pequeno-font-size: 22px;
+  --titulo-pequeno-line-height: normal;
+  --titulo-pequeno-font-weight: 400;
+  --titulo-pequeno-font-style: normal;
+
+  /* Effects */
+}
