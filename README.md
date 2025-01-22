@@ -3,11 +3,11 @@
 Projeto da disciplina Engenharia de Software da Universidade de Brasília. 
 Integrantes: 
 - 190114860
-- -
-- -
-- -
-- -
-- -
+- 242036844
+- 211055316
+- 222008584
+- 222026985
+- 222025039
 
 ### Objetivo do Sistema
 
@@ -23,7 +23,7 @@ O sistema permite:
 1. **Controle de Registros**:
    - Apenas o criador do registro pode atualizá-lo ou excluí-lo.
 2. **Exclusão em Cadeia**:
-   - A exclusão de um restaurante implica na exclusão de menus e avaliações associados.
+   - A exclusão de um restaurante implica na exclusão dos menus e avaliações associados.
 3. **Associação de Menus**:
    - Menus podem ser associados apenas a restaurantes criados pelo mesmo usuário.
 
@@ -36,7 +36,7 @@ O sistema permite:
 2. **Documento de Visão e Escopo (Vision)**:
    - Detalha os objetivos e limites do sistema.
 3. **Especificação de Requisitos Não Funcionais**:
-   - Artefato descrevendo requisitos gerais do sistema (system-wide requirements).
+   - Artefato que descreve os requisitos gerais do sistema (system-wide requirements).
 4. **Especificação de Requisitos Funcionais**:
    - Definida por meio de histórias de usuário (user stories).
 5. **Descrição da Arquitetura do Software**:
@@ -52,10 +52,10 @@ O sistema permite:
 
 ## Tecnologias e Ferramentas
 
-- **Backend**: 
-- **Frontend**: 
-- **Banco de Dados**:
-- **Ferramentas de Gerenciamento**: GiitHub, Kanban
+- **Backend**: Flask, Python.
+- **Frontend**: HTML, CSS, JavaScript.
+- **Banco de Dados**: ORM, MySQL.
+- **Ferramentas de Gerenciamento**: GitHub, Kanban.
 
 ---
 
